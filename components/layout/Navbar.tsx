@@ -78,7 +78,7 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
                 <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
               </span>
               <span className="text-[10px] font-mono text-slate-400 tracking-wider">
-                COMPUTER ENGINEER & AI
+                FULL-STACK DEVELOPER & AI ENGINEER
               </span>
             </div>
           </a>

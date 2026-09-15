@@ -32,12 +32,12 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Ufaruna Gideon" }],
   creator: "Ufaruna Gideon",
-  metadataBase: new URL("https://gideonufaruna.vercel.app"),
+  metadataBase: new URL("https://ufarunagideon.vercel.app"),
   openGraph: {
     title: "Gideon Ufaruna | Full-Stack Developer & AI Engineer",
     description:
       "Computer Engineering student at FUT Minna, Full-Stack Developer & Aspiring AI Engineer building modern web apps and intelligent tools.",
-    url: "https://gideonufaruna.vercel.app",
+    url: "https://ufarunagideon.vercel.app",
     siteName: "Gideon Ufaruna Portfolio",
     locale: "en_US",
     type: "website",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Gideon Ufaruna | Full-Stack Developer & AI Engineer",
     description:
       "Computer Engineering student at FUT Minna building web applications, cloud backends, and AI products.",
-    creator: "@ufarunagideon",
+    creator: "@geed_ion",
   },
   robots: {
     index: true,

@@ -25,6 +25,8 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (status === "loading") return;
+
     setStatus("loading");
     setErrorMessage("");
 
@@ -35,17 +37,30 @@ export default function Contact() {
         body: JSON.stringify(formData),
       });
 
-      const data = await res.json();
+      let data: { error?: string; message?: string } | null = null;
+      try {
+        data = await res.json();
+      } catch {
+        // Response was not JSON
+      }
 
       if (!res.ok) {
-        throw new Error(data.error || "Something went wrong.");
+        throw new Error(data?.error || "Failed to send message. Please try again.");
       }
 
       setStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (err: any) {
+    } catch (err: unknown) {
       setStatus("error");
-      setErrorMessage(err.message || "Failed to send message. Please try again.");
+      if (err instanceof Error) {
+        if (err.name === "TypeError" && err.message.toLowerCase().includes("fetch")) {
+          setErrorMessage("Network error: Unable to reach the server. Please check your connection.");
+        } else {
+          setErrorMessage(err.message || "Failed to send message. Please try again.");
+        }
+      } else {
+        setErrorMessage("An unexpected error occurred. Please try again.");
+      }
     }
   };
 
@@ -59,10 +74,10 @@ export default function Contact() {
             08. Get In Touch
           </span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Have an idea? <span className="gradient-text">Let's build it.</span>
+            Have an idea? <span className="gradient-text">Let&apos;s build it.</span>
           </h2>
           <p className="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Whether you have a project in mind, an opportunity, or simply want to connect, I'd love to hear from you.
+            Whether you have a project in mind, an opportunity, or simply want to connect, I&apos;d love to hear from you.
           </p>
         </div>
 
