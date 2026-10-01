@@ -60,8 +60,8 @@ export interface ProcessStep {
 export const personalDetails = {
   name: "Ufaruna Gideon",
   greeting: "Hi, I'm Gideon 👋",
-  roleTitle: "Computer Engineer & Full-Stack Developer",
-  aspiringRole: "Aspiring AI Engineer",
+  roleTitle: "Full-Stack Developer | AI Engineer",
+  // aspiringRole: "Aspiring AI Engineer",
   tagline: "I build modern web applications and intelligent digital products that solve real problems.",
   status: "Available for opportunities",
   institution: "Federal University of Technology, Minna (FUT Minna)",

@@ -21,7 +21,7 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Experience", href: "#experience" },
-    { name: "Certifications", href: "#certifications" },
+    // { name: "Certifications", href: "#certifications" },
     { name: "Services", href: "#services" },
     { name: "Process", href: "#process" },
     { name: "Contact", href: "#contact" },
@@ -123,12 +123,12 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
             >
               <LinkedinIcon className="w-4 h-4" />
             </a>
-            <button
+            {/* <button
               onClick={onOpenResume}
               className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-slate-700/80 transition-colors shadow-sm"
             >
               <FileText className="w-3.5 h-3.5" /> Resume
-            </button>
+            </button> */}
           </div>
 
           {/* Mobile Hamburger Toggle */}
@@ -196,7 +196,7 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
                     <LinkedinIcon className="w-5 h-5" />
                   </a>
                 </div>
-                <button
+                {/* <button
                   onClick={() => {
                     setMobileMenuOpen(false);
                     onOpenResume();
@@ -204,7 +204,7 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-cyan-500 text-slate-950"
                 >
                   <FileText className="w-4 h-4" /> View Resume
-                </button>
+                </button> */}
               </div>
             </div>
           </motion.div>

@@ -36,7 +36,7 @@ export default function Home() {
         <Skills />
         <Projects onSelectProject={(project) => setSelectedProject(project)} />
         <Experience />
-        <Certifications />
+        {/* <Certifications /> */}
         <Services />
         <Process />
         <Contact />

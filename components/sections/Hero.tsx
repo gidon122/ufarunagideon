@@ -82,13 +82,13 @@ export default function Hero({ onOpenResume }: HeroProps) {
               </a>
 
               {/* Secondary CTA: Download Resume */}
-              <button
+              {/* <button
                 onClick={onOpenResume}
                 className="inline-flex items-center gap-2 px-5 py-3.5 text-xs sm:text-sm font-semibold text-cyan-400 hover:text-cyan-300 hover:underline transition-all"
               >
                 <FileText className="w-4 h-4 text-cyan-400" />
                 <span>View & Download Resume</span>
-              </button>
+              </button> */}
             </motion.div>
 
             {/* Quick Tech Badges */}
@@ -149,14 +149,14 @@ export default function Hero({ onOpenResume }: HeroProps) {
                     <span className="text-slate-400">name:</span>{" "}
                     <span className="text-emerald-300">"Ufaruna Gideon"</span>,
                   </div>
-                  <div>
+                  {/* <div>
                     <span className="text-slate-400">institution:</span>{" "}
                     <span className="text-emerald-300">"FUT Minna"</span>,
                   </div>
                   <div>
                     <span className="text-slate-400">degree:</span>{" "}
                     <span className="text-emerald-300">"Computer Engineering"</span>,
-                  </div>
+                  </div> */}
                   <div>
                     <span className="text-slate-400">focus:</span> [
                     <span className="text-amber-300">"Web Development"</span>,{" "}
@@ -187,7 +187,7 @@ export default function Hero({ onOpenResume }: HeroProps) {
             </div>
 
             {/* Ambient Floating Badges */}
-            <div className="hidden sm:flex absolute -bottom-6 -left-6 glass-pill p-3 rounded-xl border border-cyan-500/30 shadow-lg items-center gap-3 animate-float">
+            <div className="hidden sm:flex absolute -bottom-12 -left-6 glass-pill p-3 rounded-xl border border-cyan-500/30 shadow-lg items-center gap-3 animate-float">
               <div className="p-2 rounded-lg bg-cyan-500/20 text-cyan-400">
                 <Sparkles className="w-5 h-5" />
               </div>
