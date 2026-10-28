@@ -34,8 +34,8 @@ export default function Home() {
         <Hero onOpenResume={() => setIsResumeOpen(true)} />
         <About />
         <Skills />
-        <Projects onSelectProject={(project) => setSelectedProject(project)} />
-        <Experience />
+        {/* <Projects onSelectProject={(project) => setSelectedProject(project)} /> */}
+        {/* <Experience /> */}
         {/* <Certifications /> */}
         <Services />
         <Process />

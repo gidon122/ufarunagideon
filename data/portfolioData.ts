@@ -68,7 +68,7 @@ export const personalDetails = {
   fieldOfStudy: "Computer Engineering",
   bio: "I'm a Computer Engineering student at FUT Minna passionate about building software products at the intersection of web development, cloud computing, and artificial intelligence. I enjoy taking ideas from initial concept to clean, functional production software.",
   location: "Minna, Niger State, Nigeria",
-  email: "ufarunagidosky@gmail.com",
+  email: "ufarunagideon22@gmail.com",
   socials: {
     github: "https://github.com/gidon122",
     linkedin: "https://www.linkedin.com/in/gideonufaruna/",
