@@ -106,9 +106,9 @@ export default function Footer() {
                 <Mail className="w-4 h-4" />
               </a>
             </div>
-            <p className="text-xs text-slate-500 pt-2">
+            {/* <p className="text-xs text-slate-500 pt-2">
               Based in Minna, Niger State, Nigeria
-            </p>
+            </p> */}
           </div>
         </div>
 
