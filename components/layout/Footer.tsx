@@ -30,13 +30,13 @@ export default function Footer() {
               "Building useful things with code, AI, and curiosity."
             </p>
 
-            <p className="text-xs text-slate-500">
+            {/* <p className="text-xs text-slate-500">
               Computer Engineering Student at Federal University of Technology, Minna (FUT Minna). Focused on Full-Stack Systems, Agentic AI, and Cloud Architecture.
-            </p>
+            </p> */}
           </div>
 
           {/* Column 2: Quick Links */}
-          <div className="md:col-span-3 space-y-3">
+          {/* <div className="md:col-span-3 space-y-3">
             <h3 className="text-xs uppercase tracking-wider text-slate-200 font-bold">
               Navigation
             </h3>
@@ -72,7 +72,7 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Column 3: Connect & Socials */}
           <div className="md:col-span-3 space-y-3">

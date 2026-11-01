@@ -65,13 +65,13 @@ export default function Hero({ onOpenResume }: HeroProps) {
               className="flex flex-wrap items-center gap-4 pt-2"
             >
               {/* Primary CTA 1 */}
-              <a
+              {/* <a
                 href="#projects"
                 className="group relative inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-semibold text-sm shadow-xl shadow-cyan-500/20 hover:shadow-cyan-500/35 transition-all duration-300"
               >
                 <span>View My Work</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </a> */}
 
               {/* Primary CTA 2 */}
               <a
