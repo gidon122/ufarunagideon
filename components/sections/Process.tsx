@@ -8,24 +8,24 @@ export default function Process() {
   const stepIcons = [Search, Compass, Code, CheckCircle, Rocket];
 
   return (
-    <section id="process" className="py-24 relative z-10">
+    <section id="process" className="py-14 sm:py-20 lg:py-24 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-2.5 sm:space-y-3">
           <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 bg-cyan-950/80 border border-cyan-800/60 px-3.5 py-1 rounded-full">
             07. Engineering Workflow
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
             How I Work
           </h2>
-          <p className="text-slate-400 text-sm sm:text-base">
+          <p className="text-slate-400 text-xs sm:text-sm lg:text-base">
             A disciplined 5-step development methodology ensuring reliable, scalable, and beautifully designed software.
           </p>
         </div>
 
         {/* 5-Step Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {processSteps.map((stepItem, idx) => {
             const IconComponent = stepIcons[idx] || Search;
 
@@ -36,21 +36,21 @@ export default function Process() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="glass-card rounded-2xl p-5 border border-slate-800 flex flex-col justify-between glass-card-hover relative group space-y-4"
+                className="glass-card rounded-2xl p-4 sm:p-5 border border-slate-800 flex flex-col justify-between glass-card-hover relative group space-y-3 sm:space-y-4"
               >
                 {/* Step Header */}
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-black font-mono text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                  <span className="text-xl sm:text-2xl font-black font-mono text-cyan-400 group-hover:text-cyan-300 transition-colors">
                     {stepItem.step}
                   </span>
-                  <div className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 group-hover:text-white transition-colors">
+                  <div className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 group-hover:text-white transition-colors shrink-0">
                     <IconComponent className="w-4 h-4" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="space-y-2">
-                  <h3 className="text-base font-bold text-white">
+                <div className="space-y-1.5 sm:space-y-2">
+                  <h3 className="text-sm sm:text-base font-bold text-white">
                     {stepItem.title}
                   </h3>
                   <p className="text-xs text-cyan-300 font-medium">

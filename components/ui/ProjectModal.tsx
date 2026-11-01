@@ -15,7 +15,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -31,7 +31,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.25, ease: "easeOut" }}
-          className="relative w-full max-w-3xl glass-card rounded-2xl border border-slate-700/60 p-6 sm:p-8 z-10 shadow-2xl overflow-hidden text-slate-100 max-h-[90vh] flex flex-col justify-between"
+          className="relative w-full max-w-3xl glass-card rounded-2xl border border-slate-700/60 p-4 sm:p-8 z-10 shadow-2xl overflow-hidden text-slate-100 max-h-[92vh] sm:max-h-[90vh] flex flex-col justify-between"
         >
           {/* Header Glow */}
           <div className="absolute -top-24 -right-24 w-60 h-60 rounded-full bg-cyan-500/20 blur-3xl pointer-events-none" />
@@ -39,14 +39,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white rounded-full bg-slate-800/60 hover:bg-slate-700/80 transition-colors z-20"
+            className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 text-slate-400 hover:text-white rounded-full bg-slate-800/60 hover:bg-slate-700/80 transition-colors z-20 min-h-[40px] min-w-[40px] flex items-center justify-center"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
           </button>
 
           {/* Scrollable Content */}
-          <div className="overflow-y-auto pr-2 custom-scrollbar space-y-6">
+          <div className="overflow-y-auto pr-1 sm:pr-2 custom-scrollbar space-y-4 sm:space-y-6">
             {/* Category Pill */}
             <div className="flex items-center gap-3">
               <span className="px-3 py-1 text-xs font-semibold tracking-wider text-cyan-400 bg-cyan-950/80 border border-cyan-800/60 rounded-full uppercase">
@@ -61,20 +61,20 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
             {/* Title & Short Description */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+              <h2 className="text-xl sm:text-3xl font-bold text-white tracking-tight">
                 {project.title}
               </h2>
-              <p className="text-slate-300 text-sm sm:text-base mt-2 leading-relaxed">
+              <p className="text-slate-300 text-xs sm:text-base mt-2 leading-relaxed">
                 {project.shortDescription}
               </p>
             </div>
 
             {/* Full Description */}
-            <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-4 sm:p-5">
+            <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-3.5 sm:p-5">
               <h3 className="text-xs uppercase tracking-wider text-cyan-400 font-bold mb-2 flex items-center gap-2">
                 <Code2 className="w-4 h-4" /> Overview & Architecture
               </h3>
-              <p className="text-slate-300 text-sm leading-relaxed">
+              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                 {project.fullDescription}
               </p>
             </div>
@@ -82,10 +82,10 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             {/* Highlights */}
             {project.highlights && project.highlights.length > 0 && (
               <div>
-                <h3 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
-                  <Layers className="w-4 h-4 text-indigo-400" /> Key Features & Engineering Highlights
+                <h3 className="text-xs sm:text-sm font-semibold text-white mb-2.5 sm:mb-3 flex items-center gap-2">
+                  <Layers className="w-4 h-4 text-indigo-400 shrink-0" /> Key Features & Engineering Highlights
                 </h3>
-                <ul className="grid grid-cols-1 gap-2.5">
+                <ul className="grid grid-cols-1 gap-2 sm:gap-2.5">
                   {project.highlights.map((highlight, idx) => (
                     <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
                       <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
@@ -98,14 +98,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
             {/* Technologies */}
             <div>
-              <h3 className="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2.5">
+              <h3 className="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2 sm:mb-2.5">
                 Technologies Used
               </h3>
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {project.technologies.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1 text-xs font-mono font-medium text-slate-200 bg-slate-800/80 border border-slate-700 rounded-md"
+                    className="px-2.5 sm:px-3 py-1 text-xs font-mono font-medium text-slate-200 bg-slate-800/80 border border-slate-700 rounded-md"
                   >
                     {tech}
                   </span>
@@ -115,12 +115,12 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
 
           {/* Modal Footer Actions */}
-          <div className="pt-6 mt-4 border-t border-slate-800 flex flex-wrap items-center justify-end gap-3 shrink-0">
+          <div className="pt-4 sm:pt-6 mt-3 sm:mt-4 border-t border-slate-800 flex flex-col sm:flex-row items-stretch sm:items-center justify-end gap-2.5 sm:gap-3 shrink-0">
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium transition-colors border border-slate-700"
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium transition-colors border border-slate-700 min-h-[44px] sm:min-h-0"
             >
               <GithubIcon className="w-4 h-4" /> View Code on GitHub
             </a>
@@ -129,7 +129,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white text-sm font-semibold shadow-lg shadow-cyan-500/20 transition-all"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white text-sm font-semibold shadow-lg shadow-cyan-500/20 transition-all min-h-[44px] sm:min-h-0"
             >
               <ExternalLink className="w-4 h-4" /> Live Demo
             </a>

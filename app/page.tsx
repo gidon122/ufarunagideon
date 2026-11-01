@@ -22,7 +22,7 @@ export default function Home() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen bg-[#07090e] text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-300">
+    <div className="relative min-h-screen bg-[#07090e] text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-300 overflow-x-hidden w-full">
       {/* Background Glow Mesh */}
       <BackgroundGlow />
 
